@@ -1,21 +1,41 @@
-from configs import out_folder, list, permitir_downloads_iguais
-from download_list import baixar_audio, baixar_audio_igual
+from configs import out_folder, artists_urls, allow_duplicate_downloads 
+from download_list import *
+import time
 import os
 import sys
+try:
+    print('Escolha o formato de download: \n   [1] MP3\n   [2] MP4\n')
+    choice = input('INPUT>> ')
+    for artist, urls in artists_urls.items():
+        # Define o caminho da pasta para o artista, usando o diretório de saída
+        artist_output_folder = f'{out_folder}/{artist}'
+        os.makedirs(artist_output_folder, exist_ok=True)
+        print(f"--- Iniciando downloads para {artist} ---")
+        # Adicione este loop para iterar sobre CADA URL na lista 'urls'
 
-for artista, urls in list.items():
-    # Define o caminho da pasta para o artista, usando o diretório de saída
-    caminho_pasta_artista = f'{out_folder}/{artista}'
-    os.makedirs(caminho_pasta_artista, exist_ok=True)
-    print(f"--- Iniciando downloads para {artista} ---")
-    # Adicione este loop para iterar sobre CADA URL na lista 'urls'
-    for url in urls:
-        if permitir_downloads_iguais == False:
-            baixar_audio(url, caminho_pasta_artista)
-        elif permitir_downloads_iguais == True:
-            baixar_audio_igual(url, caminho_pasta_artista)
-        else:
-            print(f'[ERRO] var permitir_downloads_iguais = {permitir_downloads_iguais}. invalid text')
-            sys.exit()
-    print(f"--- Todos os downloads para {artista} foram processados. ---")
-    
+        for url in urls:
+            if choice == '1':
+                if allow_duplicate_downloads == False:
+                    baixar_audio(url, artist_output_folder)
+                elif allow_duplicate_downloads == True:
+                    baixar_audio_igual(url, artist_output_folder)
+                else:
+                    print(f'[ERRO] var permitir_downloads_iguais = {allow_duplicate_downloads}. invalid text')
+                    sys.exit()
+            elif choice == '2':
+                if allow_duplicate_downloads == False:
+                    baixar_video(url, artist_output_folder)
+                elif allow_duplicate_downloads == True:
+                    baixar_video_igual(url, artist_output_folder) 
+                else:
+                    print(f'[ERRO] var permitir_downloads_iguais = {allow_duplicate_downloads}. invalid text')
+                    sys.exit()
+
+        print(f"--- Todos os downloads para {artist} foram processados. ---")
+except KeyboardInterrupt:
+    print('\nstoping', end='', flush=True)
+    for _ in range(3):  # 3 pontos = 1500ms, ajuste se quiser mais tempo
+        print('.', end='', flush=True)
+        time.sleep(0.5)
+    print()  # quebra de linha ao final
+    sys.exit()

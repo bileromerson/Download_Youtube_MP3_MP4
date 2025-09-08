@@ -1,12 +1,24 @@
-out_folder = r"./downloads"
+# The main output folder for all downloads.
+out_folder = r'./downloads'
 
-baixar_tumbnail = True
-permitir_downloads_iguais = False
+# Set to True to download and embed the video thumbnail in the media file.
+download_thumbnail = True
 
-Qualidade = '320'
-mostrar_progreso = True
+# If set to False, the script will skip downloading a file that already exists.
+# If set to True, it will append a counter (e.g., "song_1.mp3") to the filename.
+allow_duplicate_downloads = False
 
-list = {
+# Set to True to display the download progress in the terminal.
+show_progress = True
+
+# The desired audio or video quality for the conversion.
+# For MP3, '320' is a high-quality option.
+# For MP4, '720' or '1080' are common video resolutions.
+quality = '320'
+
+# A dictionary containing the artist names as keys and a list of YouTube URLs as values.
+# The script will create a folder for each artist and download the media files from the provided URLs.
+artists_urls = {
     "Arctica The Fox":[
         'https://www.youtube.com/watch?v=jeLQoGnbTsY&list=OLAK5uy_kNpipHajAQjp_hz3UDGTdGFxjWwHskrHc',
         'https://www.youtube.com/watch?v=4RjQ2kiJjUs&list=OLAK5uy_kxYZAqvHeZyhju8UECze1KE3TPY6pvSqE',
