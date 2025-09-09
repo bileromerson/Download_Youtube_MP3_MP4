@@ -2,7 +2,7 @@
 out_folder = r'./downloads'
 
 # Set to True to download and embed the video thumbnail in the media file.
-download_thumbnail = True
+download_thumbnail = False
 
 # If set to False, the script will skip downloading a file that already exists.
 # If set to True, it will append a counter (e.g., "song_1.mp3") to the filename.

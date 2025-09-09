@@ -1,9 +1,12 @@
 from configs import *
 import os
 import yt_dlp
+import eyed3
 import time
 from time import sleep
 import sys
+
+
 
 def baixar_audio(url, artist_output_folder):
     try:
@@ -21,11 +24,13 @@ def baixar_audio(url, artist_output_folder):
             }, {
                 # Este post-processor usa o FFmpeg para embutir a miniatura
                 'key': 'EmbedThumbnail',
+            }, {
+                # **NOVO**: Este post-processor embuti todos os metadados
+                'key': 'FFmpegMetadata',
             }],
-            
-            # O modelo de saída para o nome do arquivo
+
+            'parse_metadata': True,
             'outtmpl': f'{artist_output_folder}/%(title)s.%(ext)s',
-            'parse_metadata': {'artist': '%(artist)s'}
         }
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
 
@@ -33,7 +38,6 @@ def baixar_audio(url, artist_output_folder):
             print("Baixando apenas o áudio...")
             ydl.download([url])
             print("Download e conversão para MP3 concluídos!")
-
     except Exception as e:
         print(f"Ocorreu um erro: {e}")
     except KeyboardInterrupt:
@@ -73,12 +77,6 @@ def baixar_audio_igual(url, artist_output_folder):
         # Passo 1: Extrair informações do vídeo, focando no título e ID
         ydl_opts = {
             'format': 'bestaudio/best',
-            # O modelo de saída para o nome do arquivo
-            'outtmpl': os.path.join(artist_output_folder, final_filename),
-            # 'outtmpl': outtmpl,
-            'writethumbnail':  download_thumbnail,
-            
-            # A opção 'embedthumbnail' instrui o yt-dlp a baixar a miniatura do vídeo
             'quiet': True,
             'noprogress': not show_progress,
             'postprocessors': [{
@@ -88,8 +86,16 @@ def baixar_audio_igual(url, artist_output_folder):
                 'preferredquality': quality,
             },{
                 # Este post-processor usa o FFmpeg para embutir a miniatura
-                'key': 'EmbedThumbnail',   
+                'key': 'EmbedThumbnail',
+            },{
+                # Este post-processor embuti todos os metadados
+                'key': 'FFmpegMetadata',
             }],
+            # A opção 'embedthumbnail' instrui o yt-dlp a baixar a miniatura do vídeo
+            'writethumbnail':  download_thumbnail,
+            'parse_metadata': True,
+            # O modelo de saída para o nome do arquivo
+            'outtmpl': os.path.join(artist_output_folder, final_filename + '.%(ext)s'),
         }
                 
         print('Iniciando o download...')
@@ -111,32 +117,9 @@ def baixar_audio_igual(url, artist_output_folder):
 
 def baixar_video(url, artist_output_folder):
     try:
-        ydl_info_opts = {
-            'skip_download': True,
-            'quiet': True,
-            'noprogress': True,
-            'nologger': True, 
-        }
-        with yt_dlp.YoutubeDL(ydl_info_opts) as ydl_info:
-            info = ydl_info.extract_info(url, download=False)
-            video_title = info.get('title', 'video_sem_titulo')
-            sanitized_filename = "".join(c for c in video_title if c.isalnum() or c in (' ', '.', '_', '-')).strip()
-        
-        # Inicia o contador para a verificação
-        counter = 1
-        final_filename = f"{sanitized_filename}"
-    
-        # Loop para verificar se o arquivo já existe e adicionar um contador se necessário
-        while os.path.exists(f'{artist_output_folder}/{final_filename}.mp3'):
-            final_filename = f"{sanitized_filename}_{counter}"
-            # Atualiza a variável que será usada na próxima verificação
-            # Você pode usar um formato como "nome_do_arquivo_1.mp3" ou "(1)nome_do_arquivo.mp3"
-            counter += 1
-        print(f"O nome do arquivo final será: '{final_filename}.mp3'")
         # Define o formato de vídeo baseado na qualidade desejada
         ydl_opts = {
             'format': f'bestvideo[height<={quality}]+bestaudio/best/best',
-            'outtmpl': os.path.join(artist_output_folder, final_filename),
             'writethumbnail': download_thumbnail,
             'quiet': True,
             'noprogress': not show_progress,
@@ -145,7 +128,13 @@ def baixar_video(url, artist_output_folder):
                 'preferedformat': 'mp4',  # converte para mp4
             }, {
                 'key': 'EmbedThumbnail',
+            },{
+                # Este post-processor embuti todos os metadados
+                'key': 'FFmpegMetadata',
             }],
+            'parse_metadata': True,
+            # O modelo de saída para o nome do arquivo
+            'outtmpl': f'{artist_output_folder}/%(title)s.%(ext)s',
         }
         print('entrando na URL:', url)
         print(f"Baixando vídeo na qualidade até {quality}p...")
@@ -164,19 +153,47 @@ def baixar_video(url, artist_output_folder):
 
 def baixar_video_igual(url, artist_output_folder):
     try:
-        # Define o formato de vídeo baseado na qualidade desejada
+        ydl_info_opts = {
+        'skip_download': True,
+        'quiet': True,
+        'noprogress': True,
+        'nologger': True, 
+        }
+        with yt_dlp.YoutubeDL(ydl_info_opts) as ydl_info:
+            info = ydl_info.extract_info(url, download=False)
+            video_title = info.get('title', 'video_sem_titulo')
+            sanitized_filename = "".join(c for c in video_title if c.isalnum() or c in (' ', '.', '_', '-')).strip()
+
+        # Inicia o contador para a verificação
+        counter = 1
+        final_filename = f"{sanitized_filename}"
+
+        # Loop para verificar se o arquivo já existe e adicionar um contador se necessário
+        while os.path.exists(f'{artist_output_folder}/{final_filename}.mp4'):
+            final_filename = f"{sanitized_filename}_{counter}"
+            # Atualiza a variável que será usada na próxima verificação
+            # Você pode usar um formato como "nome_do_arquivo_1.mp4" ou "(1)nome_do_arquivo.mp4"
+            counter += 1
+        print(f"O nome do arquivo final será: '{final_filename}.mp4'")
+            # Define o formato de vídeo baseado na qualidade desejada
         ydl_opts = {
             'format': f'bestvideo[height<={quality}]+bestaudio/best/best',
-            'outtmpl': f'{artist_output_folder}/%(title)s.%(ext)s',
-            'writethumbnail': download_thumbnail,
             'quiet': True,
+            'nologger': True,
             'noprogress': not show_progress,
             'postprocessors': [{
                 'key': 'FFmpegVideoConvertor',
                 'preferedformat': 'mp4',  # converte para mp4
             }, {
                 'key': 'EmbedThumbnail',
+            },{
+                # Este post-processor embuti todos os metadados
+                'key': 'FFmpegMetadata',
             }],
+            'writethumbnail': download_thumbnail,
+            'parse_metadata': True,
+            # O modelo de saída para o nome do arquivo
+            'outtmpl': os.path.join(artist_output_folder, final_filename)
         }
         print('entrando na URL:', url)
         print(f"Baixando vídeo na qualidade até {quality}p...")

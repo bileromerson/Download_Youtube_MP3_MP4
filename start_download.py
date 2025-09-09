@@ -11,7 +11,6 @@ try:
         artist_output_folder = f'{out_folder}/{artist}'
         os.makedirs(artist_output_folder, exist_ok=True)
         print(f"--- Iniciando downloads para {artist} ---")
-        # Adicione este loop para iterar sobre CADA URL na lista 'urls'
 
         for url in urls:
             if choice == '1':

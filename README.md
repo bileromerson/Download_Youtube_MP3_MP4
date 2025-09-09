@@ -23,7 +23,7 @@ The script uses the powerful `yt-dlp` library to perform the downloads, allowing
 
 ## ⚙️ Requirements
 
-To run this script, you need to have **Python 3.13** and **FFmpeg** installed on your machine.
+To run this script, you need to have **Python 3.13**, **FFmpeg** and **eyed3** installed on your machine.
 
 ### 🐍 Python 3.13
 - Check your Python version with the command:
