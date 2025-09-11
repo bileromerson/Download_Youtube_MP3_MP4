@@ -1,13 +1,12 @@
 
 
 download_thumbnail = True
-thumbnail_width = 640
 
 allow_duplicate_downloads = False
 
 show_progress = True
 
-Metadata = True
+Metadata = True 
 
 quality = '320'
 
