@@ -1,40 +1,31 @@
-# The main output folder for all downloads.
-out_folder = r'./downloads'
 
-# Set to True to download and embed the video thumbnail in the media file.
-download_thumbnail = False
 
-# If set to False, the script will skip downloading a file that already exists.
-# If set to True, it will append a counter (e.g., "song_1.mp3") to the filename.
+download_thumbnail = True
+thumbnail_width = 640
+
 allow_duplicate_downloads = False
 
-# Set to True to display the download progress in the terminal.
 show_progress = True
 
-# The desired audio or video quality for the conversion.
-# For MP3, '320' is a high-quality option.
-# For MP4, '720' or '1080' are common video resolutions.
+Metadata = True
+
 quality = '320'
 
-# A dictionary containing the artist names as keys and a list of YouTube URLs as values.
-# The script will create a folder for each artist and download the media files from the provided URLs.
+
 artists_urls = {
     "Arctica The Fox":[
         'https://www.youtube.com/watch?v=jeLQoGnbTsY&list=OLAK5uy_kNpipHajAQjp_hz3UDGTdGFxjWwHskrHc',
-        'https://www.youtube.com/watch?v=4RjQ2kiJjUs&list=OLAK5uy_kxYZAqvHeZyhju8UECze1KE3TPY6pvSqE',
-        'https://www.youtube.com/watch?v=TGgc8o1qiws&list=OLAK5uy_nr844SDIyJKuPSEswS749Get6nLc1ukXg',
-        'https://www.youtube.com/watch?v=j-SYw_hNRmc&list=OLAK5uy_lynnyb0rBD3CX0DzTpHIgUmmtPhsa8V2U',
-        'https://www.youtube.com/watch?v=e4Lbhd8a4fA&list=OLAK5uy_mM8MEQwubS3fnNinUdur5KVyh-mTTQgLo',
+        'https://www.youtube.com/watch?v=E2lZ51VIJ9o&list=OLAK5uy_kv12hbd29HJuL7A_v_dpSUOcJnfQeW57Y',
         'https://www.youtube.com/watch?v=_Mz3QyH3K18&list=OLAK5uy_l1DZq9RhFIIhW2jQ-aIel5fxRCkqwz4ec',
-        'https://www.youtube.com/watch?v=niJZw4kZ7ak&list=OLAK5uy_mtw1Wbrgy1friMCJO-9JX0UzLXgoV9L_s',
         'https://www.youtube.com/watch?v=80ezKLZMlhs&list=OLAK5uy_mDCVug3OburoGlGrx2AzJuVIwSCaRAE4g',
-        'https://www.youtube.com/watch?v=mpph5nAfy2k&list=OLAK5uy_nGVGVbBVPOhS7prxOmSzmVcpJonVRbduo',
-        'https://www.youtube.com/watch?v=E2lZ51VIJ9o&list=OLAK5uy_kv12hbd29HJuL7A_v_dpSUOcJnfQeW57Y'
+        'https://www.youtube.com/watch?v=niJZw4kZ7ak&list=OLAK5uy_mtw1Wbrgy1friMCJO-9JX0UzLXgoV9L_s',
+        'https://www.youtube.com/watch?v=e4Lbhd8a4fA&list=OLAK5uy_mM8MEQwubS3fnNinUdur5KVyh-mTTQgLo',
+        'https://www.youtube.com/watch?v=j-SYw_hNRmc&list=OLAK5uy_lynnyb0rBD3CX0DzTpHIgUmmtPhsa8V2U',
 
     ],
     
     "Snuffles":[
-        'https://www.youtube.com/watch?v=_dMbSHwtKk8&list=PLlzTn5sGFPUgFrksUTY94JYWI-2RSKjwE',
+        'https://www.youtube.com/watch?v=_dMbSHwtKk8&list=OLAK5uy_mAOoBZjMD2MBnKigNWQjyWqO9oDZqI8D4',
         'https://www.youtube.com/watch?v=njowoGhmw6E&list=OLAK5uy_mKdgOUqujhvkqHIONfZKgt9k5wHuCSdxI',
         'https://www.youtube.com/watch?v=xp2SzlnzbkA&list=OLAK5uy_nd0U1gYnm4djWbFTeQkeeqMkXmtCcAS7k',
         'https://www.youtube.com/watch?v=pEtcyFBysAg&list=OLAK5uy_nsF0girFJkrpELredpI3I9ZImlZ81r644',
@@ -120,12 +111,10 @@ artists_urls = {
         'https://www.youtube.com/watch?v=DpJpdJPndlM&list=OLAK5uy_mkKc5O3pqotX5k3dN4TY-jcpnGdexAuvQ',
         'https://www.youtube.com/watch?v=HpXyLcAdnG8&list=OLAK5uy_ndTg0FNTGzp_uow-qc_UZK-8cAU8HaVvw',
         'https://www.youtube.com/watch?v=LaSBPWQWrGk&list=OLAK5uy_khPW1JiqdhRfDo6WfDuLxipb7giUU2jGo',
-        'https://youtu.be/KdAxWr_htj8?si=h6pK8CiBY63dzfaI',
-        'https://youtu.be/fn-_ChY9YfA?si=u70mMlcO9PK24Lva',
-        'https://youtu.be/Z5mHLIBF3dA?si=-3QhDt56FD-u83cQ',
-        'https://youtu.be/ntvBrIscNDY?si=DI3zyyUwZyjZOc4e',
-        'https://www.youtube.com/watch?v=uzk8XuCbyKE',
-        'https://www.youtube.com/watch?v=6P0N_jnyBto',
+        'https://www.youtube.com/watch?v=KdAxWr_htj8&list=OLAK5uy_kinRE8M76w_556y6FdwFNjUVuInvp2X88',
+        'https://www.youtube.com/watch?v=J4peYh3dOSA&list=OLAK5uy_njzcgFYWx2mwkAFYnP5lY8JWzcuZFVB-A',
+        'https://www.youtube.com/watch?v=4y2fOSYyLWk&list=OLAK5uy_koZ9AQ-QkafBUjrRIoRfUl2u2fPyGBnfs',
+        'https://www.youtube.com/watch?v=qRpvJEazUfo&list=OLAK5uy_nfB3Wb_Roq5S0fFH6lTpkFLW7Fo8yqen8',
 
     ],
     
@@ -140,15 +129,18 @@ artists_urls = {
     
     "The score":[
         'https://www.youtube.com/watch?v=ALXFl6HfKbg',
-        'https://www.youtube.com/watch?v=Kj5Vzg21WnI&list=OLAK5uy_kIiPYNXdOHp5LSCE988IwRx-anaU6tskE&index=1',
-        'https://www.youtube.com/watch?v=8RDy31N0gdY&list=OLAK5uy_nrvMViAVt6zizmPXf0I95h3zP9aEPr_s8',
-        'https://www.youtube.com/watch?v=VfRcGxjWboo&list=OLAK5uy_ln3teeQf_C730ud8-DFxtr9RijjM_CXe4',
         'https://youtu.be/ALXFl6HfKbg?si=XxP_zdq_enG2zTOD',
         'https://youtu.be/uf1M263w_fQ?si=R3WwMXwnS3nj6LcL',
         'https://youtu.be/uhXW7eqF_SQ?si=b4aEQkulnowWxqtm',
         'https://youtu.be/6sl7rTwPJuo?si=h3YUTxeVQ3bbEtoi',
         'https://youtu.be/ruw2woPI-fg?si=k50lj6REERE84ZE6',
         'https://youtu.be/RyBDRS39G_w?si=PxR7i1-Xmt2szVkh',
+        'youtube.com/watch?v=jecQcgbyetw&pp=ygURdGhlIHNjb3JlIGxlZ2VuZHM%3D',
+        'https://youtu.be/ZRRt8EyYNvg?si=DTt9jPBYCz_CCeiV',
+        'https://www.youtube.com/watch?v=b99r48grKGI&list=PL9B6YR7hJGrNxE8J1M8LRIIqcao6uZsbr&index=16'
+        'https://www.youtube.com/watch?v=Kj5Vzg21WnI&list=OLAK5uy_kIiPYNXdOHp5LSCE988IwRx-anaU6tskE&index=1',
+        'https://www.youtube.com/watch?v=8RDy31N0gdY&list=OLAK5uy_nrvMViAVt6zizmPXf0I95h3zP9aEPr_s8',
+        'https://www.youtube.com/watch?v=VfRcGxjWboo&list=OLAK5uy_ln3teeQf_C730ud8-DFxtr9RijjM_CXe4',
         'https://www.youtube.com/watch?v=oP5S04q6sVo&list=OLAK5uy_nlKCAU567rGd8Fpo86ZnNP5h5SLDZGyms',
         'https://www.youtube.com/watch?v=3wZllhP3FZo&list=OLAK5uy_lBTlVQuWRlUeRP65IJPI3jTM6CmpElZMo',
         'https://www.youtube.com/watch?v=1fG2SqZ-R5Q&list=OLAK5uy_mUinkjduRBkBomGdctjVMV-Iyn8ZozMgs',
@@ -158,14 +150,10 @@ artists_urls = {
         'https://www.youtube.com/watch?v=Kj5Vzg21WnI&list=OLAK5uy_mwS4FLjWHxralDm0Dmp-slYn0Hqgu65x8',
         'https://www.youtube.com/watch?v=sjLRh-QPM9c&list=OLAK5uy_m6Rh9aRpZ8NMIs_VBzgPhbporqxcAp9UA',
         'https://www.youtube.com/watch?v=mz3RwyXlpHc&list=OLAK5uy_m8e7fhAiRfAfeX9-BdLi3C-Br73vp-Dp8',
-        'youtube.com/watch?v=jecQcgbyetw&pp=ygURdGhlIHNjb3JlIGxlZ2VuZHM%3D',
-        'https://youtu.be/ZRRt8EyYNvg?si=DTt9jPBYCz_CCeiV',
-
-
+        
     ],
     
     "NEFEX":[
-        'https://www.youtube.com/watch?v=6WhefAhgeQw&list=PLrxcNWZXdQ2kmHEf4XNOCHs5eHvOzlQ3z',
         'https://youtu.be/P055h-3L6Sk?si=KJo-RPPddUne3LUA',
         'https://www.youtube.com/watch?v=83RUhxsfLWs',
         'https://www.youtube.com/watch?v=yV6yCNfenJs',
@@ -181,17 +169,18 @@ artists_urls = {
         'https://www.youtube.com/watch?v=BVy9MApx9KA',
         'https://www.youtube.com/watch?v=kdYcG9l-fio',
         'https://www.youtube.com/watch?v=ExQ-XgsmL5Y',
-        'https://www.youtube.com/watch?v=EgZ39cjAJuM'
+        'https://www.youtube.com/watch?v=EgZ39cjAJuM',
+        'https://www.youtube.com/watch?v=6WhefAhgeQw&list=PLrxcNWZXdQ2kmHEf4XNOCHs5eHvOzlQ3z',
 
     ],
     
     "The Chainsmokers":[
-        'https://www.youtube.com/watch?v=DrKA7sKOhws&list=OLAK5uy_mYnxqzxYuLidfZyjfi56-rqMWe89loRK0',
-        'https://www.youtube.com/watch?v=FM7MFYoylVs&list=OLAK5uy_m4uQCCuYP056fEpPb3hCg2gRszf570VHM',
         'https://youtu.be/tlILlcCE8Sc?si=o4j0Q2CEe6BpMek2',
         'https://youtu.be/tlILlcCE8Sc?si=GGqzQq12WlEUII5i',
         'https://www.youtube.com/watch?v=sY8aL17tusg',
-        'https://www.youtube.com/watch?v=PT2_F-1esPk'
+        'https://www.youtube.com/watch?v=PT2_F-1esPk',
+        'https://www.youtube.com/watch?v=DrKA7sKOhws&list=OLAK5uy_mYnxqzxYuLidfZyjfi56-rqMWe89loRK0',
+        'https://www.youtube.com/watch?v=FM7MFYoylVs&list=OLAK5uy_m4uQCCuYP056fEpPb3hCg2gRszf570VHM',
     ],
     
     "Ruelle":[
@@ -226,6 +215,10 @@ artists_urls = {
     ],
     
     "ImagineDragons":[
+        'https://www.youtube.com/watch?v=w3viBe2Q0P8',
+        'https://www.youtube.com/watch?v=V5M2WZiAy6k',
+        'https://www.youtube.com/watch?v=e4RMh7NLHPY',
+        'https://www.youtube.com/watch?v=7wtfhZwyrcc',
         'https://youtu.be/7wtfhZwyrcc?si=t7B_WnfI7lHNrECg',
         'https://youtu.be/IOrbP1OqNsg?si=-1twVzUKIrYp6LSf',
         'https://youtu.be/pvrkfb1C4tE?si=BYYCBuEt04--DJmH',
@@ -234,10 +227,6 @@ artists_urls = {
         'https://youtu.be/uEDhGX-UTeI?si=mFNMi5S7vGrH1Ldo',
         'https://youtu.be/78El9Q-_WzU?si=zLhfWqyfK2j8B0RC',
         'https://youtu.be/7wtfhZwyrcc?si=EbSix9Zy7z9kSHFs',
-        'https://www.youtube.com/watch?v=w3viBe2Q0P8',
-        'https://www.youtube.com/watch?v=V5M2WZiAy6k',
-        'https://www.youtube.com/watch?v=e4RMh7NLHPY',
-        'https://www.youtube.com/watch?v=7wtfhZwyrcc'
     ],
     
     "clarx":[
@@ -269,10 +258,11 @@ artists_urls = {
         'https://www.youtube.com/watch?v=0MwcJszdqLI',
         'https://www.youtube.com/watch?v=3ESat1K9Sdc',
         'https://youtu.be/KFhl5mmEYe0?si=UwZ-KNXmoC7TOrJn',
+        'https://www.youtube.com/watch?v=lW9ep22YmlM',
         'https://www.youtube.com/watch?v=2QdPxdcMhFQ&list=OLAK5uy_levfcdMAj8RELLiK2yEK2qTIyEesAwoXE',
         'https://www.youtube.com/watch?v=8fXx3efGot8&list=OLAK5uy_mvtk8HtZl57UkDr1DQkzyBf8-VXtkvnbY',
-        'https://www.youtube.com/watch?v=lW9ep22YmlM'
 
     ]
     
 }
+ 

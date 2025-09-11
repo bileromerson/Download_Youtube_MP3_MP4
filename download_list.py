@@ -12,7 +12,6 @@ def baixar_audio(url, artist_output_folder):
     try:
         ydl_opts = {
             'format': 'bestaudio/best',
-            # 'outtmpl': outtmpl,
             'writethumbnail': download_thumbnail,
             'quiet': True,
             'noprogress': not show_progress,
@@ -21,23 +20,23 @@ def baixar_audio(url, artist_output_folder):
                 'key': 'FFmpegExtractAudio',
                 'preferredcodec': 'mp3',
                 'preferredquality': quality,
-            }, {
-                # Este post-processor usa o FFmpeg para embutir a miniatura
-                'key': 'EmbedThumbnail',
-            }, {
-                # **NOVO**: Este post-processor embuti todos os metadados
-                'key': 'FFmpegMetadata',
             }],
-
-            'parse_metadata': True,
+            'writethumbnail': download_thumbnail,
             'outtmpl': f'{artist_output_folder}/%(title)s.%(ext)s',
         }
+        if download_thumbnail:
+            ydl_opts['postprocessors'].append({'key': 'EmbedThumbnail',})
+        if Metadata:
+            ydl_opts['postprocessors'].append({'key': 'FFmpegMetadata',})
+        
+        
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
 
             print('entrando na URL:',url)
             print("Baixando apenas o áudio...")
             ydl.download([url])
             print("Download e conversão para MP3 concluídos!")
+
     except Exception as e:
         print(f"Ocorreu um erro: {e}")
     except KeyboardInterrupt:
@@ -84,20 +83,17 @@ def baixar_audio_igual(url, artist_output_folder):
                 'key': 'FFmpegExtractAudio',
                 'preferredcodec': 'mp3',
                 'preferredquality': quality,
-            },{
-                # Este post-processor usa o FFmpeg para embutir a miniatura
-                'key': 'EmbedThumbnail',
-            },{
-                # Este post-processor embuti todos os metadados
-                'key': 'FFmpegMetadata',
             }],
             # A opção 'embedthumbnail' instrui o yt-dlp a baixar a miniatura do vídeo
             'writethumbnail':  download_thumbnail,
-            'parse_metadata': True,
             # O modelo de saída para o nome do arquivo
             'outtmpl': os.path.join(artist_output_folder, final_filename + '.%(ext)s'),
         }
-                
+        if download_thumbnail:
+            ydl_opts['postprocessors'].append({'key': 'EmbedThumbnail',})
+        if Metadata:
+            ydl_opts['postprocessors'].append({'key': 'FFmpegMetadata',})
+
         print('Iniciando o download...')
         with yt_dlp.YoutubeDL(ydl_opts) as ydl_download:
             print('entrando na URL:',url)
@@ -120,22 +116,21 @@ def baixar_video(url, artist_output_folder):
         # Define o formato de vídeo baseado na qualidade desejada
         ydl_opts = {
             'format': f'bestvideo[height<={quality}]+bestaudio/best/best',
-            'writethumbnail': download_thumbnail,
             'quiet': True,
             'noprogress': not show_progress,
             'postprocessors': [{
                 'key': 'FFmpegVideoConvertor',
                 'preferedformat': 'mp4',  # converte para mp4
-            }, {
-                'key': 'EmbedThumbnail',
-            },{
-                # Este post-processor embuti todos os metadados
-                'key': 'FFmpegMetadata',
             }],
-            'parse_metadata': True,
+            'writethumbnail': download_thumbnail,
             # O modelo de saída para o nome do arquivo
             'outtmpl': f'{artist_output_folder}/%(title)s.%(ext)s',
         }
+        if download_thumbnail:
+            ydl_opts['postprocessors'].append({'key': 'EmbedThumbnail',})
+        if Metadata:
+            ydl_opts['postprocessors'].append({'key': 'FFmpegMetadata',})
+
         print('entrando na URL:', url)
         print(f"Baixando vídeo na qualidade até {quality}p...")
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -186,15 +181,16 @@ def baixar_video_igual(url, artist_output_folder):
                 'preferedformat': 'mp4',  # converte para mp4
             }, {
                 'key': 'EmbedThumbnail',
-            },{
-                # Este post-processor embuti todos os metadados
-                'key': 'FFmpegMetadata',
             }],
             'writethumbnail': download_thumbnail,
-            'parse_metadata': True,
             # O modelo de saída para o nome do arquivo
             'outtmpl': os.path.join(artist_output_folder, final_filename)
         }
+        if download_thumbnail:
+            ydl_opts['postprocessors'].append({'key': 'EmbedThumbnail',})
+        if Metadata:
+            ydl_opts['postprocessors'].append({'key': 'FFmpegMetadata',})
+
         print('entrando na URL:', url)
         print(f"Baixando vídeo na qualidade até {quality}p...")
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -209,3 +205,4 @@ def baixar_video_igual(url, artist_output_folder):
             time.sleep(0.5)
         print()  # quebra de linha ao final
         sys.exit()
+
