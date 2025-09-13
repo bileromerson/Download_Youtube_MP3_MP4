@@ -1,7 +1,6 @@
 from configs import *
 import os
 import yt_dlp
-import eyed3
 import time
 from time import sleep
 import sys
@@ -12,7 +11,6 @@ def baixar_audio(url, artist_output_folder):
     try:
         ydl_opts = {
             'format': 'bestaudio/best',
-            'writethumbnail': download_thumbnail,
             'quiet': True,
             'noprogress': not show_progress,
             'postprocessors': [{
@@ -24,11 +22,11 @@ def baixar_audio(url, artist_output_folder):
             'writethumbnail': download_thumbnail,
             'outtmpl': f'{artist_output_folder}/%(title)s.%(ext)s',
         }
-        if download_thumbnail:
-            ydl_opts['postprocessors'].append({'key': 'EmbedThumbnail',})
+        
         if Metadata:
             ydl_opts['postprocessors'].append({'key': 'FFmpegMetadata',})
-        
+        if download_thumbnail:
+            ydl_opts['postprocessors'].append({'key': 'EmbedThumbnail',})
         
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
 

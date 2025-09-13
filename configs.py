@@ -1,5 +1,6 @@
 
 
+# I'm still trying to put the .JPG thumbnail, but it's already working with the video's tumbnail
 download_thumbnail = True
 
 allow_duplicate_downloads = False
@@ -75,6 +76,7 @@ artists_urls = {
     ],
     
     "Ivycomb":[
+        'https://www.youtube.com/watch?v=mVPUbGQdx2w',
         'https://www.youtube.com/watch?v=3b8SfbqD7Yw&list=OLAK5uy_nOOLG59VVJRytk9ghYXfylODcv3TzXRsM',
         'https://www.youtube.com/watch?v=xF_gHb4_K98&list=OLAK5uy_nsjRiwOOS4s7KDa02m76YYZJbjHGTEZRw',
         'https://www.youtube.com/watch?v=YuHeSoASQPs&list=OLAK5uy_m015vrwWGkEQ6x5jFLXugfQDyD2ZkPcYE',
@@ -103,7 +105,7 @@ artists_urls = {
         'https://www.youtube.com/watch?v=r8aqc6AGJKM&list=OLAK5uy_lipx_vH7ncLqrQQC9cBUtq2eYqLaaeSFM',
         'https://www.youtube.com/watch?v=Uq4Jees1sik&list=OLAK5uy_lBptObrrnFD-qNg7I92uZiq_PIUHA9BN8',
         'https://www.youtube.com/watch?v=TlDL2G31QLQ&list=OLAK5uy_k5dQ5TFFUGuH2liCVsuFSQlNB48wK_vvk',
-
+        
     ],
     
     "narpy":[
@@ -261,6 +263,14 @@ artists_urls = {
         'https://www.youtube.com/watch?v=2QdPxdcMhFQ&list=OLAK5uy_levfcdMAj8RELLiK2yEK2qTIyEesAwoXE',
         'https://www.youtube.com/watch?v=8fXx3efGot8&list=OLAK5uy_mvtk8HtZl57UkDr1DQkzyBf8-VXtkvnbY',
 
+    ],
+    "reidenshi":[
+        'https://youtu.be/0WykZs55UjA?si=k2_r25TycXHomc8a',
+        'https://www.youtube.com/watch?v=LlN8MPS7KQs&list=OLAK5uy_ms0XFuveA8zG4xIIzk-0efPZnpfbYazv4',
+        'https://www.youtube.com/watch?v=gR3nlpwRTRA&list=OLAK5uy_m2S56JgrRFL_IWzEYpdvEmDnhB2mZnjH4',
+        'https://www.youtube.com/watch?v=1beH7w29t34&list=OLAK5uy_nwRvofQrUjfVgOAi7Pz22zAbcQ6h3P790',
+        'https://www.youtube.com/watch?v=SKptOBqpB9E&list=OLAK5uy_mOzUStFWqVLMcgm6cbblxX8fbXftucVzE',
+        'https://www.youtube.com/watch?v=gSwi1Tk1gV8&list=OLAK5uy_lfaWTSCy9w673-6aH11teOGOMU1X1gbkg',
     ]
     
 }
