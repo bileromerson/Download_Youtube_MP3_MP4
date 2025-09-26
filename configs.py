@@ -25,7 +25,8 @@ artists_urls = {
     ],
     
     "Snuffles":[
-        'https://www.youtube.com/watch?v=_dMbSHwtKk8&list=OLAK5uy_mAOoBZjMD2MBnKigNWQjyWqO9oDZqI8D4',
+     
+'https://youtu.be/GS3qN6EIGk4?si=cvOeJIKC9uJe7fdZ'   'https://www.youtube.com/watch?v=_dMbSHwtKk8&list=OLAK5uy_mAOoBZjMD2MBnKigNWQjyWqO9oDZqI8D4',
         'https://www.youtube.com/watch?v=njowoGhmw6E&list=OLAK5uy_mKdgOUqujhvkqHIONfZKgt9k5wHuCSdxI',
         'https://www.youtube.com/watch?v=xp2SzlnzbkA&list=OLAK5uy_nd0U1gYnm4djWbFTeQkeeqMkXmtCcAS7k',
         'https://www.youtube.com/watch?v=pEtcyFBysAg&list=OLAK5uy_nsF0girFJkrpELredpI3I9ZImlZ81r644',
