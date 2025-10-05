@@ -4,7 +4,6 @@
 
 # Dynamic plugins .dll
 bin/
-venv/
 # Arquivos de bytecode do Python
 __pycache__/
 # Ignora pastas de ambientes virtuais
