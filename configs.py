@@ -15,9 +15,9 @@ quality = '1080'
 fps = '30'
 
 artists_urls = {
-    "Alok":[
-        'https://www.youtube.com/watch?v=qUUKIJqx010',
-    ],
+    # "Alok":[
+    #     'https://www.youtube.com/watch?v=qUUKIJqx010',
+    # ],
     # 'retrospectiva animada':[
     #     'https://www.youtube.com/watch?v=NEwA9OQmqXw&list=PL2EJlPZ0iJu6PcnlZCoU_PQrHhi0WGKiF'
     # ],
