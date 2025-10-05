@@ -113,7 +113,7 @@ def baixar_video(url, artist_output_folder):
     try:
         # Define o formato de vídeo baseado na qualidade desejada
         ydl_opts = {
-            'format': f'bestvideo[height<={quality}]+bestaudio/best/best',
+            'format': f'bestvideo[height<={quality}][fps<={fps}]+bestaudio/best/best',
             'quiet': True,
             'noprogress': not show_progress,
             'postprocessors': [{
@@ -170,7 +170,7 @@ def baixar_video_igual(url, artist_output_folder):
         print(f"O nome do arquivo final será: '{final_filename}.mp4'")
             # Define o formato de vídeo baseado na qualidade desejada
         ydl_opts = {
-            'format': f'bestvideo[height<={quality}]+bestaudio/best/best',
+            'format': f'bestvideo[height<={quality}][fps<={fps}]+bestaudio/best/best',
             'quiet': True,
             'nologger': True,
             'noprogress': not show_progress,
