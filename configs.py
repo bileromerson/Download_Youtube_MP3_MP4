@@ -1,7 +1,6 @@
 
 
 # I'm still trying to put the .JPG thumbnail, but it's already working with the video's tumbnail
-out_folder = 'E:/downloads'
 
 download_thumbnail = True
 
@@ -129,159 +128,159 @@ artists_urls = {
 
     # ],
     
-    # "When Snakes Sing":[
-    #     'https://www.youtube.com/watch?v=Vjf-x-zngx0&list=PLVs7u8sISshyMDvrUbHHQWO7FazYjXECk',
-    #     'https://www.youtube.com/watch?v=RQYpNAV0rUI&list=PLVs7u8sISshwZaLP6A5mOIv7St7U5SeZO',
-    #     'https://youtu.be/PAigrSsOCyY?si=eB-I9rBmVE_P0lPo',
-    #     'https://www.youtube.com/watch?v=nzay7XJf1qM&list=OLAK5uy_lXX2KqKamBZyIqbOTM8O_aTE1-NkOHCMU',
-    #     'https://www.youtube.com/watch?v=ZwbxqGVCQGc&list=OLAK5uy_m8HWgkAbeNZ0fKANMKpQrmOIHcrCWDqHM',
-    #     'https://www.youtube.com/watch?v=CG_G5FU956E&list=OLAK5uy_neQrN6v7K_mqg32CVS_AUJW0l1k-iGgV8'    
-    # ],
+    "When Snakes Sing":[
+        'https://www.youtube.com/watch?v=Vjf-x-zngx0&list=PLVs7u8sISshyMDvrUbHHQWO7FazYjXECk',
+        'https://www.youtube.com/watch?v=RQYpNAV0rUI&list=PLVs7u8sISshwZaLP6A5mOIv7St7U5SeZO',
+        'https://youtu.be/PAigrSsOCyY?si=eB-I9rBmVE_P0lPo',
+        'https://www.youtube.com/watch?v=nzay7XJf1qM&list=OLAK5uy_lXX2KqKamBZyIqbOTM8O_aTE1-NkOHCMU',
+        'https://www.youtube.com/watch?v=ZwbxqGVCQGc&list=OLAK5uy_m8HWgkAbeNZ0fKANMKpQrmOIHcrCWDqHM',
+        'https://www.youtube.com/watch?v=CG_G5FU956E&list=OLAK5uy_neQrN6v7K_mqg32CVS_AUJW0l1k-iGgV8'    
+    ],
     
-    # "The score":[
-    #     'https://www.youtube.com/watch?v=ALXFl6HfKbg',
-    #     'https://youtu.be/ALXFl6HfKbg?si=XxP_zdq_enG2zTOD',
-    #     'https://youtu.be/uf1M263w_fQ?si=R3WwMXwnS3nj6LcL',
-    #     'https://youtu.be/uhXW7eqF_SQ?si=b4aEQkulnowWxqtm',
-    #     'https://youtu.be/6sl7rTwPJuo?si=h3YUTxeVQ3bbEtoi',
-    #     'https://youtu.be/ruw2woPI-fg?si=k50lj6REERE84ZE6',
-    #     'https://youtu.be/RyBDRS39G_w?si=PxR7i1-Xmt2szVkh',
-    #     'youtube.com/watch?v=jecQcgbyetw&pp=ygURdGhlIHNjb3JlIGxlZ2VuZHM%3D',
-    #     'https://youtu.be/ZRRt8EyYNvg?si=DTt9jPBYCz_CCeiV',
-    #     'https://www.youtube.com/watch?v=b99r48grKGI&list=PL9B6YR7hJGrNxE8J1M8LRIIqcao6uZsbr&index=16'
-    #     'https://www.youtube.com/watch?v=Kj5Vzg21WnI&list=OLAK5uy_kIiPYNXdOHp5LSCE988IwRx-anaU6tskE&index=1',
-    #     'https://www.youtube.com/watch?v=8RDy31N0gdY&list=OLAK5uy_nrvMViAVt6zizmPXf0I95h3zP9aEPr_s8',
-    #     'https://www.youtube.com/watch?v=VfRcGxjWboo&list=OLAK5uy_ln3teeQf_C730ud8-DFxtr9RijjM_CXe4',
-    #     'https://www.youtube.com/watch?v=oP5S04q6sVo&list=OLAK5uy_nlKCAU567rGd8Fpo86ZnNP5h5SLDZGyms',
-    #     'https://www.youtube.com/watch?v=3wZllhP3FZo&list=OLAK5uy_lBTlVQuWRlUeRP65IJPI3jTM6CmpElZMo',
-    #     'https://www.youtube.com/watch?v=1fG2SqZ-R5Q&list=OLAK5uy_mUinkjduRBkBomGdctjVMV-Iyn8ZozMgs',
-    #     'https://www.youtube.com/watch?v=SYZ4y6iQdvU&list=OLAK5uy_mZWPOQ6IUqEy6rXkKPVpXhuAn3rV4wTbc',
-    #     'https://www.youtube.com/watch?v=GXDNMinUPXc&list=OLAK5uy_lrUuV_JhYtdwv5NKsWpKtHZAOlzugESEo',
-    #     'https://www.youtube.com/watch?v=BH8pv4Iht8g&list=OLAK5uy_mbPE50jkLbcCL71dYRxWhiYX6lsxCnPXY',
-    #     'https://www.youtube.com/watch?v=Kj5Vzg21WnI&list=OLAK5uy_mwS4FLjWHxralDm0Dmp-slYn0Hqgu65x8',
-    #     'https://www.youtube.com/watch?v=sjLRh-QPM9c&list=OLAK5uy_m6Rh9aRpZ8NMIs_VBzgPhbporqxcAp9UA',
-    #     'https://www.youtube.com/watch?v=mz3RwyXlpHc&list=OLAK5uy_m8e7fhAiRfAfeX9-BdLi3C-Br73vp-Dp8',
+    "The score":[
+        'https://www.youtube.com/watch?v=ALXFl6HfKbg',
+        'https://youtu.be/ALXFl6HfKbg?si=XxP_zdq_enG2zTOD',
+        'https://youtu.be/uf1M263w_fQ?si=R3WwMXwnS3nj6LcL',
+        'https://youtu.be/uhXW7eqF_SQ?si=b4aEQkulnowWxqtm',
+        'https://youtu.be/6sl7rTwPJuo?si=h3YUTxeVQ3bbEtoi',
+        'https://youtu.be/ruw2woPI-fg?si=k50lj6REERE84ZE6',
+        'https://youtu.be/RyBDRS39G_w?si=PxR7i1-Xmt2szVkh',
+        'youtube.com/watch?v=jecQcgbyetw&pp=ygURdGhlIHNjb3JlIGxlZ2VuZHM%3D',
+        'https://youtu.be/ZRRt8EyYNvg?si=DTt9jPBYCz_CCeiV',
+        'https://www.youtube.com/watch?v=b99r48grKGI&list=PL9B6YR7hJGrNxE8J1M8LRIIqcao6uZsbr&index=16'
+        'https://www.youtube.com/watch?v=Kj5Vzg21WnI&list=OLAK5uy_kIiPYNXdOHp5LSCE988IwRx-anaU6tskE&index=1',
+        'https://www.youtube.com/watch?v=8RDy31N0gdY&list=OLAK5uy_nrvMViAVt6zizmPXf0I95h3zP9aEPr_s8',
+        'https://www.youtube.com/watch?v=VfRcGxjWboo&list=OLAK5uy_ln3teeQf_C730ud8-DFxtr9RijjM_CXe4',
+        'https://www.youtube.com/watch?v=oP5S04q6sVo&list=OLAK5uy_nlKCAU567rGd8Fpo86ZnNP5h5SLDZGyms',
+        'https://www.youtube.com/watch?v=3wZllhP3FZo&list=OLAK5uy_lBTlVQuWRlUeRP65IJPI3jTM6CmpElZMo',
+        'https://www.youtube.com/watch?v=1fG2SqZ-R5Q&list=OLAK5uy_mUinkjduRBkBomGdctjVMV-Iyn8ZozMgs',
+        'https://www.youtube.com/watch?v=SYZ4y6iQdvU&list=OLAK5uy_mZWPOQ6IUqEy6rXkKPVpXhuAn3rV4wTbc',
+        'https://www.youtube.com/watch?v=GXDNMinUPXc&list=OLAK5uy_lrUuV_JhYtdwv5NKsWpKtHZAOlzugESEo',
+        'https://www.youtube.com/watch?v=BH8pv4Iht8g&list=OLAK5uy_mbPE50jkLbcCL71dYRxWhiYX6lsxCnPXY',
+        'https://www.youtube.com/watch?v=Kj5Vzg21WnI&list=OLAK5uy_mwS4FLjWHxralDm0Dmp-slYn0Hqgu65x8',
+        'https://www.youtube.com/watch?v=sjLRh-QPM9c&list=OLAK5uy_m6Rh9aRpZ8NMIs_VBzgPhbporqxcAp9UA',
+        'https://www.youtube.com/watch?v=mz3RwyXlpHc&list=OLAK5uy_m8e7fhAiRfAfeX9-BdLi3C-Br73vp-Dp8',
         
-    # ],
+    ],
     
-    # "NEFEX":[
-    #     'https://youtu.be/P055h-3L6Sk?si=KJo-RPPddUne3LUA',
-    #     'https://www.youtube.com/watch?v=83RUhxsfLWs',
-    #     'https://www.youtube.com/watch?v=yV6yCNfenJs',
-    #     'https://www.youtube.com/watch?v=DEpO-Oh3MAw',
-    #     'https://www.youtube.com/watch?v=a6j5lbt6OLQ',
-    #     'https://www.youtube.com/watch?v=CYDP_8UTAus',
-    #     'https://www.youtube.com/watch?v=z1MgFIpSqJk',
-    #     'https://www.youtube.com/watch?v=qtSmf-hhHyk',
-    #     'https://www.youtube.com/watch?v=aKfO9o2IPJ0',
-    #     'https://www.youtube.com/watch?v=83RUhxsfLWs',
-    #     'https://www.youtube.com/watch?v=X5cfg26vkOQ',
-    #     'https://www.youtube.com/watch?v=Ccsh_-Cucl4',
-    #     'https://www.youtube.com/watch?v=BVy9MApx9KA',
-    #     'https://www.youtube.com/watch?v=kdYcG9l-fio',
-    #     'https://www.youtube.com/watch?v=ExQ-XgsmL5Y',
-    #     'https://www.youtube.com/watch?v=EgZ39cjAJuM',
-    #     'https://www.youtube.com/watch?v=6WhefAhgeQw&list=PLrxcNWZXdQ2kmHEf4XNOCHs5eHvOzlQ3z',
+    "NEFEX":[
+        'https://youtu.be/P055h-3L6Sk?si=KJo-RPPddUne3LUA',
+        'https://www.youtube.com/watch?v=83RUhxsfLWs',
+        'https://www.youtube.com/watch?v=yV6yCNfenJs',
+        'https://www.youtube.com/watch?v=DEpO-Oh3MAw',
+        'https://www.youtube.com/watch?v=a6j5lbt6OLQ',
+        'https://www.youtube.com/watch?v=CYDP_8UTAus',
+        'https://www.youtube.com/watch?v=z1MgFIpSqJk',
+        'https://www.youtube.com/watch?v=qtSmf-hhHyk',
+        'https://www.youtube.com/watch?v=aKfO9o2IPJ0',
+        'https://www.youtube.com/watch?v=83RUhxsfLWs',
+        'https://www.youtube.com/watch?v=X5cfg26vkOQ',
+        'https://www.youtube.com/watch?v=Ccsh_-Cucl4',
+        'https://www.youtube.com/watch?v=BVy9MApx9KA',
+        'https://www.youtube.com/watch?v=kdYcG9l-fio',
+        'https://www.youtube.com/watch?v=ExQ-XgsmL5Y',
+        'https://www.youtube.com/watch?v=EgZ39cjAJuM',
+        'https://www.youtube.com/watch?v=6WhefAhgeQw&list=PLrxcNWZXdQ2kmHEf4XNOCHs5eHvOzlQ3z',
 
-    # ],
+    ],
     
-    # "The Chainsmokers":[
-    #     'https://youtu.be/tlILlcCE8Sc?si=o4j0Q2CEe6BpMek2',
-    #     'https://youtu.be/tlILlcCE8Sc?si=GGqzQq12WlEUII5i',
-    #     'https://www.youtube.com/watch?v=sY8aL17tusg',
-    #     'https://www.youtube.com/watch?v=PT2_F-1esPk',
-    #     'https://www.youtube.com/watch?v=DrKA7sKOhws&list=OLAK5uy_mYnxqzxYuLidfZyjfi56-rqMWe89loRK0',
-    #     'https://www.youtube.com/watch?v=FM7MFYoylVs&list=OLAK5uy_m4uQCCuYP056fEpPb3hCg2gRszf570VHM',
-    # ],
+    "The Chainsmokers":[
+        'https://youtu.be/tlILlcCE8Sc?si=o4j0Q2CEe6BpMek2',
+        'https://youtu.be/tlILlcCE8Sc?si=GGqzQq12WlEUII5i',
+        'https://www.youtube.com/watch?v=sY8aL17tusg',
+        'https://www.youtube.com/watch?v=PT2_F-1esPk',
+        'https://www.youtube.com/watch?v=DrKA7sKOhws&list=OLAK5uy_mYnxqzxYuLidfZyjfi56-rqMWe89loRK0',
+        'https://www.youtube.com/watch?v=FM7MFYoylVs&list=OLAK5uy_m4uQCCuYP056fEpPb3hCg2gRszf570VHM',
+    ],
     
-    # "Ruelle":[
-    #     'https://www.youtube.com/watch?v=DjkJ7SUe-4o',
-    #     'https://www.youtube.com/watch?v=UM3X5pdhVEk',
-    #     'https://www.youtube.com/watch?v=BnSkt6V3qF0',
-    #     'https://www.youtube.com/watch?v=4NmX5vcNK6E',
-    #     'https://www.youtube.com/watch?v=UqX6GZ2nz88',
-    #     'https://www.youtube.com/watch?v=lDsSiaSs9Bo',
-    #     'https://www.youtube.com/watch?v=uQoHmfi8FEw',
-    #     'https://www.youtube.com/watch?v=-T5eYF9WiRI',
-    #     'https://www.youtube.com/watch?v=IeFzk1qYSc4',
-    #     'https://www.youtube.com/watch?v=PPte8HzjpQk',
-    #     'https://www.youtube.com/watch?v=GX7f1Btk1yM',
-    #     'https://www.youtube.com/watch?v=iBqBWleWW0U'
+    "Ruelle":[
+        'https://www.youtube.com/watch?v=DjkJ7SUe-4o',
+        'https://www.youtube.com/watch?v=UM3X5pdhVEk',
+        'https://www.youtube.com/watch?v=BnSkt6V3qF0',
+        'https://www.youtube.com/watch?v=4NmX5vcNK6E',
+        'https://www.youtube.com/watch?v=UqX6GZ2nz88',
+        'https://www.youtube.com/watch?v=lDsSiaSs9Bo',
+        'https://www.youtube.com/watch?v=uQoHmfi8FEw',
+        'https://www.youtube.com/watch?v=-T5eYF9WiRI',
+        'https://www.youtube.com/watch?v=IeFzk1qYSc4',
+        'https://www.youtube.com/watch?v=PPte8HzjpQk',
+        'https://www.youtube.com/watch?v=GX7f1Btk1yM',
+        'https://www.youtube.com/watch?v=iBqBWleWW0U'
 
-    # ],
+    ],
     
-    # "Sam Tinnesz":[
-    #     'https://www.youtube.com/watch?v=yzVQkO92wNw',
-    #     'https://www.youtube.com/watch?v=EKVZrbitbd8',
-    #     'https://www.youtube.com/watch?v=gOMsN0FNg2Y',
-    #     'https://www.youtube.com/watch?v=ZaPqkconvIE',
-    #     'https://www.youtube.com/watch?v=yzVQkO92wNw',
-    #     'https://www.youtube.com/watch?v=50stcfV5fmA',
-    #     'https://www.youtube.com/watch?v=ptIhqKgB9AI'
+    "Sam Tinnesz":[
+        'https://www.youtube.com/watch?v=yzVQkO92wNw',
+        'https://www.youtube.com/watch?v=EKVZrbitbd8',
+        'https://www.youtube.com/watch?v=gOMsN0FNg2Y',
+        'https://www.youtube.com/watch?v=ZaPqkconvIE',
+        'https://www.youtube.com/watch?v=yzVQkO92wNw',
+        'https://www.youtube.com/watch?v=50stcfV5fmA',
+        'https://www.youtube.com/watch?v=ptIhqKgB9AI'
 
-    # ],
+    ],
     
-    # "Kevin McAllister":[
-    #     'youtube.com/watch?v=cHK2b3zf4hw&pp=ygUQS2V2aW4gTWNBbGxpc3Rlcg%3D%3D'
-    # ],
+    "Kevin McAllister":[
+        'youtube.com/watch?v=cHK2b3zf4hw&pp=ygUQS2V2aW4gTWNBbGxpc3Rlcg%3D%3D'
+    ],
     
-    # "ImagineDragons":[
-    #     'https://www.youtube.com/watch?v=w3viBe2Q0P8',
-    #     'https://www.youtube.com/watch?v=V5M2WZiAy6k',
-    #     'https://www.youtube.com/watch?v=e4RMh7NLHPY',
-    #     'https://www.youtube.com/watch?v=7wtfhZwyrcc',
-    #     'https://youtu.be/7wtfhZwyrcc?si=t7B_WnfI7lHNrECg',
-    #     'https://youtu.be/IOrbP1OqNsg?si=-1twVzUKIrYp6LSf',
-    #     'https://youtu.be/pvrkfb1C4tE?si=BYYCBuEt04--DJmH',
-    #     'https://youtu.be/w3viBe2Q0P8?si=CMQddLKMfLNrYMkz',
-    #     'https://youtu.be/CBDT9LkrrVc?si=FK__JZ4hPFzSMqcV',
-    #     'https://youtu.be/uEDhGX-UTeI?si=mFNMi5S7vGrH1Ldo',
-    #     'https://youtu.be/78El9Q-_WzU?si=zLhfWqyfK2j8B0RC',
-    #     'https://youtu.be/7wtfhZwyrcc?si=EbSix9Zy7z9kSHFs',
-    # ],
+    "ImagineDragons":[
+        'https://www.youtube.com/watch?v=w3viBe2Q0P8',
+        'https://www.youtube.com/watch?v=V5M2WZiAy6k',
+        'https://www.youtube.com/watch?v=e4RMh7NLHPY',
+        'https://www.youtube.com/watch?v=7wtfhZwyrcc',
+        'https://youtu.be/7wtfhZwyrcc?si=t7B_WnfI7lHNrECg',
+        'https://youtu.be/IOrbP1OqNsg?si=-1twVzUKIrYp6LSf',
+        'https://youtu.be/pvrkfb1C4tE?si=BYYCBuEt04--DJmH',
+        'https://youtu.be/w3viBe2Q0P8?si=CMQddLKMfLNrYMkz',
+        'https://youtu.be/CBDT9LkrrVc?si=FK__JZ4hPFzSMqcV',
+        'https://youtu.be/uEDhGX-UTeI?si=mFNMi5S7vGrH1Ldo',
+        'https://youtu.be/78El9Q-_WzU?si=zLhfWqyfK2j8B0RC',
+        'https://youtu.be/7wtfhZwyrcc?si=EbSix9Zy7z9kSHFs',
+    ],
     
-    # "clarx":[
-    #     'https://www.youtube.com/watch?v=iRJiiRmwi_8',
-    #     'https://www.youtube.com/watch?v=_OLrjAWzUR0',
-    #     'https://www.youtube.com/watch?v=K4xM2C-_MUE',
-    #     'https://www.youtube.com/watch?v=L75f9TWj3Mw',
-    #     'https://www.youtube.com/watch?v=_OLrjAWzUR0',
-    #     'https://www.youtube.com/watch?v=pWAKZ-6xIxQ'
-    # ],
+    "clarx":[
+        'https://www.youtube.com/watch?v=iRJiiRmwi_8',
+        'https://www.youtube.com/watch?v=_OLrjAWzUR0',
+        'https://www.youtube.com/watch?v=K4xM2C-_MUE',
+        'https://www.youtube.com/watch?v=L75f9TWj3Mw',
+        'https://www.youtube.com/watch?v=_OLrjAWzUR0',
+        'https://www.youtube.com/watch?v=pWAKZ-6xIxQ'
+    ],
     
-    # "TheFatRat":[
-    #     'https://www.youtube.com/watch?v=whFmuLRRPKU',
-    #     'https://www.youtube.com/watch?v=i-wYV7OVoTM',
-    #     'https://www.youtube.com/watch?v=n8X9_MgEdCg',
-    #     'https://www.youtube.com/watch?v=B7xai5u_tnk',
-    #     'https://www.youtube.com/watch?v=cMg8KaMdDYo',
-    #     'https://www.youtube.com/watch?v=KR-eV7fHNbM',
-    #     'https://www.youtube.com/watch?v=gHgv19ip-0c',
-    #     'https://www.youtube.com/watch?v=kL8CyVqzmkc',
-    #     'https://www.youtube.com/watch?v=j-2DGYNXRx0',
-    #     'https://www.youtube.com/watch?v=DT61L8hbbJ4',
-    #     'https://www.youtube.com/watch?v=jqkPqfOFmbY',
-    #     'https://www.youtube.com/watch?v=eWOuuwrREh0',
-    #     'https://www.youtube.com/watch?v=6ZDxop2yFao',
-    #     'https://www.youtube.com/watch?v=XMWJ8tfeS50',
-    #     'https://www.youtube.com/watch?v=Ioh0bqty8LY',
-    #     'https://www.youtube.com/watch?v=hh_r7jJBvGM',
-    #     'https://www.youtube.com/watch?v=0MwcJszdqLI',
-    #     'https://www.youtube.com/watch?v=3ESat1K9Sdc',
-    #     'https://youtu.be/KFhl5mmEYe0?si=UwZ-KNXmoC7TOrJn',
-    #     'https://www.youtube.com/watch?v=lW9ep22YmlM',
-    #     'https://www.youtube.com/watch?v=2QdPxdcMhFQ&list=OLAK5uy_levfcdMAj8RELLiK2yEK2qTIyEesAwoXE',
-    #     'https://www.youtube.com/watch?v=8fXx3efGot8&list=OLAK5uy_mvtk8HtZl57UkDr1DQkzyBf8-VXtkvnbY',
+    "TheFatRat":[
+        'https://www.youtube.com/watch?v=whFmuLRRPKU',
+        'https://www.youtube.com/watch?v=i-wYV7OVoTM',
+        'https://www.youtube.com/watch?v=n8X9_MgEdCg',
+        'https://www.youtube.com/watch?v=B7xai5u_tnk',
+        'https://www.youtube.com/watch?v=cMg8KaMdDYo',
+        'https://www.youtube.com/watch?v=KR-eV7fHNbM',
+        'https://www.youtube.com/watch?v=gHgv19ip-0c',
+        'https://www.youtube.com/watch?v=kL8CyVqzmkc',
+        'https://www.youtube.com/watch?v=j-2DGYNXRx0',
+        'https://www.youtube.com/watch?v=DT61L8hbbJ4',
+        'https://www.youtube.com/watch?v=jqkPqfOFmbY',
+        'https://www.youtube.com/watch?v=eWOuuwrREh0',
+        'https://www.youtube.com/watch?v=6ZDxop2yFao',
+        'https://www.youtube.com/watch?v=XMWJ8tfeS50',
+        'https://www.youtube.com/watch?v=Ioh0bqty8LY',
+        'https://www.youtube.com/watch?v=hh_r7jJBvGM',
+        'https://www.youtube.com/watch?v=0MwcJszdqLI',
+        'https://www.youtube.com/watch?v=3ESat1K9Sdc',
+        'https://youtu.be/KFhl5mmEYe0?si=UwZ-KNXmoC7TOrJn',
+        'https://www.youtube.com/watch?v=lW9ep22YmlM',
+        'https://www.youtube.com/watch?v=2QdPxdcMhFQ&list=OLAK5uy_levfcdMAj8RELLiK2yEK2qTIyEesAwoXE',
+        'https://www.youtube.com/watch?v=8fXx3efGot8&list=OLAK5uy_mvtk8HtZl57UkDr1DQkzyBf8-VXtkvnbY',
 
-    # ],
-    # "reidenshi":[
-    #     'https://youtu.be/0WykZs55UjA?si=k2_r25TycXHomc8a',
-    #     'https://www.youtube.com/watch?v=LlN8MPS7KQs&list=OLAK5uy_ms0XFuveA8zG4xIIzk-0efPZnpfbYazv4',
-    #     'https://www.youtube.com/watch?v=gR3nlpwRTRA&list=OLAK5uy_m2S56JgrRFL_IWzEYpdvEmDnhB2mZnjH4',
-    #     'https://www.youtube.com/watch?v=1beH7w29t34&list=OLAK5uy_nwRvofQrUjfVgOAi7Pz22zAbcQ6h3P790',
-    #     'https://www.youtube.com/watch?v=SKptOBqpB9E&list=OLAK5uy_mOzUStFWqVLMcgm6cbblxX8fbXftucVzE',
-    #     'https://www.youtube.com/watch?v=gSwi1Tk1gV8&list=OLAK5uy_lfaWTSCy9w673-6aH11teOGOMU1X1gbkg',
-    # ]
+    ],
+    "reidenshi":[
+        'https://youtu.be/0WykZs55UjA?si=k2_r25TycXHomc8a',
+        'https://www.youtube.com/watch?v=LlN8MPS7KQs&list=OLAK5uy_ms0XFuveA8zG4xIIzk-0efPZnpfbYazv4',
+        'https://www.youtube.com/watch?v=gR3nlpwRTRA&list=OLAK5uy_m2S56JgrRFL_IWzEYpdvEmDnhB2mZnjH4',
+        'https://www.youtube.com/watch?v=1beH7w29t34&list=OLAK5uy_nwRvofQrUjfVgOAi7Pz22zAbcQ6h3P790',
+        'https://www.youtube.com/watch?v=SKptOBqpB9E&list=OLAK5uy_mOzUStFWqVLMcgm6cbblxX8fbXftucVzE',
+        'https://www.youtube.com/watch?v=gSwi1Tk1gV8&list=OLAK5uy_lfaWTSCy9w673-6aH11teOGOMU1X1gbkg',
+    ]
     
 }
  

@@ -1,8 +1,8 @@
 from configs import out_folder, artists_urls, allow_duplicate_downloads 
 from download_list import *
-import tivenme
 import os
 import sys
+import time 
 try:
     print('Escolha o formato de download: \n   [1] MP3\n   [2] MP4\n')
     choice = input('INPUT>> ')
