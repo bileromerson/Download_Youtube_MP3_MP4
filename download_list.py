@@ -1,17 +1,11 @@
 
-
-from configs import out_folder, artists_urls, allow_duplicate_downloads 
-
 from configs import *
 import os
-import yt_dlp
+import yt_dlp  
 import time
 import sys
 
-
-
 #  --------------------- THIS IS ONLY ONE TEST FUNCTION TO GENERAL DOWNLOADS FOR ONE CODE MORE FAST AND LEGIBLE  ---------------------
-
 
 def download(url, artist_output_folder, choice):
     try:

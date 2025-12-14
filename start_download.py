@@ -1,5 +1,5 @@
 from configs import out_folder, artists_urls, allow_duplicate_downloads 
-from download_list import *
+from download_list import download
 import os
 import sys
 import time 
@@ -18,9 +18,10 @@ try:
             print(f"--- mais um de {artist} ---")
             download(url, artist_output_folder, choice)
         print(f"--- Todos os downloads para {artist} foram processados. ---")
-        
+except Exception as e:
+    print(f"Ocorreu um erro: {e}")
+
 except KeyboardInterrupt:
-    print('\nstoping', end='', flush=True)
     for _ in range(3):
         print('.', end='', flush=True)
         time.sleep(0.5)
