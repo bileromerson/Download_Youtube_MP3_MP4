@@ -8,13 +8,21 @@ allow_duplicate_downloads = False # for duplicate downloads Ex: Music(1).mp3 BET
 show_progress = True # show progress bar during download
 Metadata = True  # if you want to add metadata to the files
 
+
+
 #           -------------- Quality Settings --------------
+
+
 
 audio_quality = '320' #  audio quality kbps
 video_quality = '1080'#  video quality Pixels
 fps = '30' #  >>>>>>>>>  frames per second FPS
 
+
+
 #           -------------- Artists and URLs --------------
+
+
 
 artists_urls = { # list of artists and their youtube urls
 #     'retrospectiva animada':[
@@ -201,13 +209,13 @@ artists_urls = { # list of artists and their youtube urls
 #         'https://www.youtube.com/watch?v=6WhefAhgeQw&list=PLrxcNWZXdQ2kmHEf4XNOCHs5eHvOzlQ3z',
 
 #     ],
-    "Coldplay":[
-        'https://www.youtube.com/watch?v=1kVxpsi1XQ4',# Viva La Vida {MP4}
-        'https://www.youtube.com/watch?v=zp7NtW_hKJI',# A Sky Full of Stars
-    ],
-    "Jamie Duffy":[
-        'https://www.youtube.com/watch?v=ZT0aOrjIcVE'# Solas {MP4}
-    ],
+    # "Coldplay":[
+    #     'https://www.youtube.com/watch?v=1kVxpsi1XQ4',# Viva La Vida {MP4}
+    #     'https://www.youtube.com/watch?v=zp7NtW_hKJI',# A Sky Full of Stars
+    # ],
+    # "Jamie Duffy":[
+    #     'https://www.youtube.com/watch?v=ZT0aOrjIcVE'# Solas {MP4}
+    # ],
     # "The Chainsmokers":[
     #     'https://www.youtube.com/watch?v=eACohWVwTOc',# Sick Boy 
     #     'https://www.youtube.com/watch?v=GnNi_LuMnN4',# Sick Boy (ONEDUO Remix)
