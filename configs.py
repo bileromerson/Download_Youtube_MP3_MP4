@@ -4,7 +4,6 @@ out_folder = 'Music/test' # output folder for downloaded files
 # I'm still trying to put the .JPG thumbnail, but it's already working with the video's tumbnail
 
 download_thumbnail = True
-allow_duplicate_downloads = False # for duplicate downloads Ex: Music(1).mp3 BETA!!!
 show_progress = True # show progress bar during download
 Metadata = True  # if you want to add metadata to the files
 
@@ -13,7 +12,8 @@ Metadata = True  # if you want to add metadata to the files
 #           -------------- Quality Settings --------------
 
 
-
+audio_lenguege = 'pt-br'#  deixe orig para o original
+have_subtitle = True  #  coloque em string a lingua ou deixw falso
 audio_quality = '320' #  audio quality kbps
 video_quality = '1080'#  video quality Pixels
 fps = '30' #  >>>>>>>>>  frames per second FPS
@@ -25,6 +25,14 @@ fps = '30' #  >>>>>>>>>  frames per second FPS
 
 
 artists_urls = { # list of artists and their youtube urls
+    'hacking':[
+        "https://www.youtube.com/watch?v=qFsj6KL8_nU"
+    ]
+
+
+
+
+    
 #     'retrospectiva animada':[
 #         'https://www.youtube.com/watch?v=NEwA9OQmqXw&list=PL2EJlPZ0iJu6PcnlZCoU_PQrHhi0WGKiF' #Playlist completa {MP4}
 #     ],

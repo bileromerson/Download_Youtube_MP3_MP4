@@ -1,11 +1,14 @@
 
-from core.downloader import download
-from utils.utilitários import is_playlist, playlist_name_pytube
+# version: 2.0.1 (BETA)
 
+
+from core.downloader import download
+# from utils.info import*
 from configs import out_folder, artists_urls
-import os
-import sys
 import time
+import sys
+import os
+
 
 try:
     print('Escolha o formato de download: \n   [1] MP3\n   [2] MP4\n')
@@ -16,9 +19,6 @@ try:
         artist_output_folder = f'{out_folder}/{artist}'
         os.makedirs(artist_output_folder, exist_ok=True)
         print(f"----- Iniciando downloads para {artist} -----")
-        if is_playlist(url):
-            print(f"nome playlist: {playlist_name_pytube(url)}")
-
         for url in urls:
             print(f"--- mais um de {artist} ---")
             download(url, artist_output_folder, choice)
