@@ -15,6 +15,9 @@ try:
     choice = input('INPUT>> ')
 
     for artist, urls in artists_urls.items():
+        if urls == []:
+            print(f"{artist}== NULL\n pulando...")
+            continue
         # Define o caminho da pasta para o artista, usando o diretório de saída
         artist_output_folder = f'{out_folder}/{artist}'
         os.makedirs(artist_output_folder, exist_ok=True)

@@ -12,46 +12,36 @@ def download(url, folder, choice):
     # --------------------- configs ---------------------
     
         ydl_opts = {
-            'sleep_interval': 5,          # Espera 5 segundos entre cada download
-            'max_sleep_interval': 10,     # Pode esperar até 10 segundos se o YouTube reclamar
+            # 'sleep_interval': 5,          # Espera 5 segundos entre cada download
+            # 'max_sleep_interval': 10,     # Pode esperar até 10 segundos se o YouTube reclamar
             # 'sleep_interval_subtitles': 2,
             'noprogress': not show_progress,
             'quiet': False,
             'nologger': False,
             'writethumbnail': download_thumbnail,
-            'writesubtitles':True,
-            'writeautomaticsub': True, # mais
-            # 'subtitlesformat': 'srt/vtt/best',
-            'subtitleslangs': ['en'],
+            'writesubtitles': have_subtitle,
+            # 'writeautomaticsub': True, # mais
             'outtmpl': f'{folder}/%(title)s.%(ext)s',
         }
 
         mp4_opts = {
             # 'skip_download': True,
-            'format': f'bestvideo[height<={video_quality}][fps<={fps}]+bestaudio[abr<={audio_quality}][language*={audio_lenguege}]/best',
-            'already_have_subtitle': False,
+            'format': f'bestvideo[height<={video_quality}][fps<={fps}]+bestaudio[abr<={audio_quality}]/best',
+            
+            'writesubtitles': False,
+            'writeautomaticsub': True,
+            'subtitleslangs': [subtitle_lenguege],
+            'audio_multistreams': True,
             'postprocessors': [
             {
                 'key': 'FFmpegVideoConvertor',
                 'preferedformat': 'mp4',
-            },
-        #     {
-        #         'key': 'FFmpegSubtitlesConvertor',
-        #         'format': 'srt',
-        #     },
-        #     {
-        #     'key': 'FFmpegEmbedSubtitle',
-        #     'already_have_subtitle': False,
-        #     },{
-        #     'key': 'FFmpegMetadata',
-        #     'add_metadata': True,
-        # }
-        ],
+            },],
         }
 
         mp3_opts = {
             # 'skip_download': True,
-            'format': f'bestaudio[abr<={audio_quality}][language*={audio_lenguege}]/best',
+            'format': f'bestaudio[abr<={audio_quality}]/best',
 
             'postprocessors': [{
                 'key': 'FFmpegExtractAudio',
@@ -71,8 +61,8 @@ def download(url, folder, choice):
         if Metadata:
             ydl_opts['postprocessors'].append({'key': 'FFmpegMetadata',})
         # if have_subtitle:
+        #     ydl_opts['postprocessors'].append({'key': 'FFmpegSubtitlesConvertor','format': 'srt',},)
         #     ydl_opts['postprocessors'].append({'key': 'FFmpegEmbedSubtitle',})
-        
         
         # --------------------- INFOS ---------------------
 
