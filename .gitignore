@@ -9,3 +9,6 @@ __pycache__/
 # Ignora pastas de ambientes virtuais
 venv/
 .venv/
+
+# ignora arquivos do trabalho nao importantes
+organizacao_proximos_passos.md
